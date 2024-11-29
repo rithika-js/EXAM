@@ -1,0 +1,105 @@
+ubuntu $ ls
+File-01.txt  file-01  file-01.txt  file-02  filesystem  notmyfile  notmyfile2  snap  testDir  testdir
+ubuntu $ ls --color=no
+File-01.txt  file-01  file-01.txt  file-02  filesystem  notmyfile  notmyfile2  snap  testDir  testdir
+ubuntu $ ls --color=yes
+File-01.txt  file-01  file-01.txt  file-02  filesystem  notmyfile  notmyfile2  snap  testDir  testdir
+ubuntu $ ls --color=auto
+File-01.txt  file-01  file-01.txt  file-02  filesystem  notmyfile  notmyfile2  snap  testDir  testdir
+ubuntu $ ls -1
+File-01.txt
+file-01
+file-01.txt
+file-02
+filesystem
+notmyfile
+notmyfile2
+snap
+testDir
+testdir
+ubuntu $ ls -n
+total 60
+-rw-r--r-- 1    0    0 32878 Nov 29 09:34 File-01.txt
+-rw-r--r-- 1    0    0     0 Nov 29 09:34 file-01
+-rw-r--r-- 1    0    0    18 Nov 29 09:34 file-01.txt
+-rw-r--r-- 1    0    0     0 Nov 29 09:34 file-02
+lrwxrwxrwx 1    0    0     1 Nov  6 12:21 filesystem -> /
+-rw-r--r-- 1 1001 1001    18 Nov 29 09:34 notmyfile
+-rw-r--r-- 1 1002 1002    19 Nov 29 09:34 notmyfile2
+drwx------ 3    0    0  4096 Nov 29 09:31 snap
+drwxr-xr-x 2    0    0  4096 Nov 29 09:34 testDir
+drwxr-xr-x 3    0    0  4096 Nov 29 09:34 testdir
+ubuntu $ ls -a
+.   .bash_history  .hidden-file  .ssh    .vimrc       file-01      file-02     notmyfile   snap     testdir
+..  .bashrc        .profile      .theia  File-01.txt  file-01.txt  filesystem  notmyfile2  testDir
+ubuntu $ ls.
+
+Command 'ls.' not found, did you mean:
+
+  command 'lsd' from snap lsd (0.16.0)
+  command 'ls' from deb coreutils (8.30-3ubuntu2)
+  command 'lsh' from deb lsh-client (2.1-12build3)
+  command 'lsc' from deb livescript (1.6.0+dfsg-1)
+  command 'lsm' from deb lsm (1.0.4-1)
+  command 'lsw' from deb suckless-tools (44-1)
+
+See 'snap info <snapname>' for additional versions.
+
+ubuntu $ ls..
+ls..: command not found
+ubuntu $ ls ..
+bin   dev  home  lib32  libx32      media  opt   root  sbin  srv       sys  usr
+boot  etc  lib   lib64  lost+found  mnt    proc  run   snap  swapfile  tmp  var
+ubuntu $ ls -A
+.bash_history  .hidden-file  .ssh    .vimrc       file-01      file-02     notmyfile   snap     testdir
+.bashrc        .profile      .theia  File-01.txt  file-01.txt  filesystem  notmyfile2  testDir
+ubuntu $ ls -al
+total 92
+drwx------  7 root      root       4096 Nov 29 09:34 .
+drwxr-xr-x 19 root      root       4096 Nov  6 12:21 ..
+-rw-------  1 root      root         20 Nov 13  2022 .bash_history
+-rw-r--r--  1 root      root       3208 Nov  6 12:21 .bashrc
+-rw-r--r--  1 root      root          0 Nov 29 09:34 .hidden-file
+-rw-r--r--  1 root      root        161 Dec  5  2019 .profile
+drwx------  2 root      root       4096 Nov  6 12:19 .ssh
+drwxr-xr-x  6 root      root       4096 Nov 29 09:34 .theia
+-rw-r--r--  1 root      root        109 Nov  6 12:21 .vimrc
+-rw-r--r--  1 root      root      32878 Nov 29 09:34 File-01.txt
+-rw-r--r--  1 root      root          0 Nov 29 09:34 file-01
+-rw-r--r--  1 root      root         18 Nov 29 09:34 file-01.txt
+-rw-r--r--  1 root      root          0 Nov 29 09:34 file-02
+lrwxrwxrwx  1 root      root          1 Nov  6 12:21 filesystem -> /
+-rw-r--r--  1 testuser  testuser     18 Nov 29 09:34 notmyfile
+-rw-r--r--  1 otheruser otheruser    19 Nov 29 09:34 notmyfile2
+drwx------  3 root      root       4096 Nov 29 09:31 snap
+drwxr-xr-x  2 root      root       4096 Nov 29 09:34 testDir
+drwxr-xr-x  3 root      root       4096 Nov 29 09:34 testdir
+ubuntu $ ls -it
+  68832 File-01.txt  1035231 testdir    71375 notmyfile   1035230 testDir  1035238 snap
+  68681 file-01.txt    68915 file-02    71455 notmyfile2    68662 file-01     3844 filesystem
+ubuntu $ ls -LS
+File-01.txt  filesystem  snap  testDir  testdir  notmyfile2  file-01.txt  notmyfile  file-01  file-02
+ubuntu $ ls -lh
+total 60K
+-rw-r--r-- 1 root      root       33K Nov 29 09:34 File-01.txt
+-rw-r--r-- 1 root      root         0 Nov 29 09:34 file-01
+-rw-r--r-- 1 root      root        18 Nov 29 09:34 file-01.txt
+-rw-r--r-- 1 root      root         0 Nov 29 09:34 file-02
+lrwxrwxrwx 1 root      root         1 Nov  6 12:21 filesystem -> /
+-rw-r--r-- 1 testuser  testuser    18 Nov 29 09:34 notmyfile
+-rw-r--r-- 1 otheruser otheruser   19 Nov 29 09:34 notmyfile2
+drwx------ 3 root      root      4.0K Nov 29 09:31 snap
+drwxr-xr-x 2 root      root      4.0K Nov 29 09:34 testDir
+drwxr-xr-x 3 root      root      4.0K Nov 29 09:34 testdir
+ubuntu $ ls -l --si
+total 62k
+-rw-r--r-- 1 root      root       33k Nov 29 09:34 File-01.txt
+-rw-r--r-- 1 root      root         0 Nov 29 09:34 file-01
+-rw-r--r-- 1 root      root        18 Nov 29 09:34 file-01.txt
+-rw-r--r-- 1 root      root         0 Nov 29 09:34 file-02
+lrwxrwxrwx 1 root      root         1 Nov  6 12:21 filesystem -> /
+-rw-r--r-- 1 testuser  testuser    18 Nov 29 09:34 notmyfile
+-rw-r--r-- 1 otheruser otheruser   19 Nov 29 09:34 notmyfile2
+drwx------ 3 root      root      4.1k Nov 29 09:31 snap
+drwxr-xr-x 2 root      root      4.1k Nov 29 09:34 testDir
+drwxr-xr-x 3 root      root      4.1k Nov 29 09:34 testdir
